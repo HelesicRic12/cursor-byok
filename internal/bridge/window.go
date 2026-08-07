@@ -227,7 +227,7 @@ func (s *WindowService) OpenMetricsDetailWindow() {
 	}
 
 	win := s.app.Window.NewWithOptions(application.WebviewWindowOptions{
-		Title:               "会话分析",
+		Title:               i18n.T(s.locale, "window.metrics_detail"),
 		Width:               1100,
 		Height:              760,
 		MinWidth:            900,
@@ -288,7 +288,7 @@ func (s *WindowService) OpenRequestMetricsWindow() {
 	}
 
 	win := s.app.Window.NewWithOptions(application.WebviewWindowOptions{
-		Title:               "请求明细",
+		Title:               i18n.T(s.locale, "window.request_metrics"),
 		Width:               1100,
 		Height:              760,
 		MinWidth:            900,
@@ -451,7 +451,7 @@ func (s *WindowService) OpenStatsOverlayWindow(x, y int, hasPosition bool) {
 		x, y, hasPosition = s.validateStatsOverlayPosition(x, y, width, height)
 	}
 	opts := application.WebviewWindowOptions{
-		Title:               "统计浮窗",
+		Title:               i18n.T(s.locale, "window.stats_overlay"),
 		Width:               width,
 		Height:              height,
 		DisableResize:       true,
